@@ -6,7 +6,7 @@
 {
     "name": "Shopinvader Dropoff site",
     "summary": "Shopinvader Dropoff site",
-    "version": "10.0.0.0.0",
+    "version": "9.0.0.0.0",
     "category": "e-commerce",
     "website": "https://akretion.com",
     "author": "Akretion",

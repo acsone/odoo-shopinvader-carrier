@@ -3,7 +3,7 @@
 # @author Sébastien BEAU <sebastien.beau@akretion.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo.addons.shopinvader_delivery_carrier.tests.common import (
+from openerp.addons.shopinvader_delivery_carrier.tests.common import (
     CommonCarrierCase,
 )
 
