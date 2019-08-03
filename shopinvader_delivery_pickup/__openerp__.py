@@ -4,12 +4,12 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    "name": "Shopinvader Delivery pickup",
-    "summary": "Shopinvader Delivery pickupt",
+    "name": "Shopinvader Delivery Pickup",
+    "summary": "Allows to deliver sale order to pickup site",
     "version": "9.0.0.0.0",
     "category": "e-commerce",
-    "website": "https://akretion.com",
-    "author": "Akretion",
+    "website": "https://github.com/shopinvader/odoo-shopinvader-carrier",
+    "author": "Akretion, ACSONE SA/NV",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
