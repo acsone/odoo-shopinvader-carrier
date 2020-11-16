@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp.addons.base_rest.components.service import to_int
-from openerp.addons.component.core import Component
-from openerp.osv.expression import FALSE_DOMAIN
+from odoo.addons.base_rest.components.service import to_int
+from odoo.addons.component.core import Component
+from odoo.osv.expression import FALSE_DOMAIN
 
 
 class DeliveryPickupService(Component):
