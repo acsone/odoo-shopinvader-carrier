@@ -9,7 +9,7 @@ from odoo.addons.shopinvader.tests.common import CommonCase
 
 class TokenCase(CommonCase):
     def test_get_token(self):
-        account = self.env.ref('delivery_roulier_laposte.keychain_la_poste')
+        account = self.env.ref("delivery_roulier_laposte.keychain_la_poste")
         account.clear_password = "laposte_token"
         with self.work_on_services() as work:
             with requests_mock.mock() as m:

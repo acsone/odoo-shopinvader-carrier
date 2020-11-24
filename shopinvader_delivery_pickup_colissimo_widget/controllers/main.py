@@ -12,8 +12,11 @@ _logger = logging.getLogger(__name__)
 
 
 class InvaderController(main.InvaderController):
-    @route(["/shopinvader/delivery_pickups/get_colissimo_pickup_token"],
-            methods=["GET"])
+    @route(
+        ["/shopinvader/delivery_pickups/get_colissimo_pickup_token"],
+        methods=["GET"],
+    )
     def get_colissimo_pickup_token(self, **params):
         return self._process_method(
-            "delivery_pickups", "get_colissimo_pickup_token", params)
+            "delivery_pickups", "get_colissimo_pickup_token", params
+        )

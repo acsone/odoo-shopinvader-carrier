@@ -38,9 +38,11 @@ class DeliveryPickupService(Component):
     def _get_laposte_account(self):
         # Note for now we use keychain because the delivery module use it
         # we will remove it later
-        account = self.env["keychain.account"]\
-            .suspend_security()\
+        account = (
+            self.env["keychain.account"]
+            .suspend_security()
             .retrieve([["namespace", "=", LAPOSTE_KEYCHAIN_NAMESPACE]])
+        )
         return account.login, account._get_password()
 
     # Validator
