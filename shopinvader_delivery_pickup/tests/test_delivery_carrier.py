@@ -8,7 +8,7 @@ from odoo.addons.shopinvader_delivery_carrier.tests.common import (
 class TestDeliveryCarrier(CommonCarrierCase):
     def setUp(self):
         super(CommonCarrierCase, self).setUp()
-        self.carrier_service = self.service.component("delivery_carriers")
+        self.carrier_service = self.service.component("delivery_carrier")
         self.poste_carrier.with_dropoff_site = True
         self.pickup_site_foo = self.env["dropoff.site"].create(
             {"ref": "foo", "name": "Foo", "carrier_id": self.poste_carrier.id}

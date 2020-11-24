@@ -117,7 +117,7 @@ class DeliveryPickupService(Component):
 
     def _search_param_to_domain(self, **params):
         # first of all, always restrict dropoff site for available carrier
-        available_carriers = self.component(usage="delivery_carriers")._search(
+        available_carriers = self.component(usage="delivery_carrier")._search(
             target=params.get("target")
         )
         carrier_id = params.get("carrier_id")
