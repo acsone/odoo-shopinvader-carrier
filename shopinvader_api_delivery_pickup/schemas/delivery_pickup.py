@@ -1,9 +1,9 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from typing import Annotated, List
+
+from typing import List
 
 from extendable_pydantic import StrictExtendableBaseModel
-from pydantic import Field
 
 from odoo import api
 
@@ -15,20 +15,8 @@ class DeliveryPickupInput(StrictExtendableBaseModel):
 
 
 class DeliveryPickupSearch(StrictExtendableBaseModel):
-    name: Annotated[
-        str | None,
-        Field(
-            description="When used, the search look for any delivery pickup where name "
-            "contains the given value case insensitively."
-        ),
-    ] = None
-    carrier_id: Annotated[
-        int | None,
-        Field(
-            description="When used, the search look for any delivery pickup where carrier "
-            "contains the given value case insensitively."
-        ),
-    ] = None
+    name: str | None = None
+    carrier_id: int | None = None
 
     def to_odoo_domain(self, env: api.Environment):
         domain = []
