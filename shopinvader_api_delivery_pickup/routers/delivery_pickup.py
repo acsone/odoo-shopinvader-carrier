@@ -38,11 +38,7 @@ def search(
     carrier are returned except if the carrier is not available for this
     site.
     """
-    delivery_pickups = (
-        env["shopinvader_api_delivery_pickup.delivery_pickup_router.helper"]
-        .new({"partner": partner})
-        ._search(data, cart=None)
-    )
+    delivery_pickups = env["shopinvader_api_delivery_pickup.delivery_pickup_router.helper"]._search(data, cart=None)
     return [
         DeliveryPickupSchema.from_delivery_pickup(delivery_pickup)
         for delivery_pickup in delivery_pickups
