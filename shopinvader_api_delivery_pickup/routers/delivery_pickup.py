@@ -54,7 +54,6 @@ class ShopinvaderApiDeliveryRouterHelper(models.AbstractModel):
         Search for delivery pickup sites
         :return: a list of dropoff.site
         """
-        cart.ensure_one()
         domain = data.to_odoo_domain()
         if cart:
             domain = expression.AND(
