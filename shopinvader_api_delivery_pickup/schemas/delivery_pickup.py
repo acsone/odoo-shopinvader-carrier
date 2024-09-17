@@ -23,7 +23,7 @@ class DeliveryPickupSearch(StrictExtendableBaseModel):
         if self.name:
             domain.append(("name", "ilike", self.name))
         if self.carrier_id:
-            domain.append(("carrier_id", "ilike", self.carrier_id.id))
+            domain.append(("carrier_id", "ilike", self.carrier_id))
         return domain
 
 

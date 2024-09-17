@@ -16,6 +16,7 @@ from odoo.addons.fastapi.dependencies import (
 
 from ..schemas import DeliveryPickup as DeliveryPickupSchema, DeliveryPickupSearch
 
+
 delivery_pickup_router = APIRouter(tags=["delivery_pickups"])
 
 
@@ -54,7 +55,7 @@ class ShopinvaderApiDeliveryRouterHelper(models.AbstractModel):
         Search for delivery pickup sites
         :return: a list of dropoff.site
         """
-        domain = data.to_odoo_domain()
+        domain = data.to_odoo_domain(self.env)
         if cart:
             domain = expression.AND(
                 domain,
